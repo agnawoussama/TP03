@@ -138,5 +138,42 @@ namespace TP03
         {
             liste_Villes();
         }
+
+        private void btn_rech_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string requette = @"SELECT * FROM ville WHERE Id_Ville = @id OR Nom_Ville LIKE @nom";
+                con.Open();
+                cmd = new SqlCommand(requette, con);
+                cmd.Parameters.AddWithValue("@id", txtbx_id.Text);
+                cmd.Parameters.AddWithValue("@nom", txtbx_nom.Text);
+                dr = cmd.ExecuteReader();
+                
+                bs.DataSource = dr;
+                dataGridView1.DataSource = bs;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erreur!");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void btn_rechSlct_Click(object sender, EventArgs e)
+        {
+            liste_Villes();
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[0].Value.ToString() == txtbx_id.Text
+                    || dataGridView1.Rows[i].Cells[1].Value.ToString() == txtbx_nom.Text)
+                {
+                    dataGridView1.Rows[i].Selected = true;
+                }
+            }
+        }
     }
 }

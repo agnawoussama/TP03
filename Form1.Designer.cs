@@ -43,6 +43,8 @@ namespace TP03
             this.btnAjt = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_rech = new System.Windows.Forms.Button();
+            this.btn_rechSlct = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +70,8 @@ namespace TP03
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_rechSlct);
+            this.groupBox1.Controls.Add(this.btn_rech);
             this.groupBox1.Controls.Add(this.btnMod);
             this.groupBox1.Controls.Add(this.btnSup);
             this.groupBox1.Controls.Add(this.btnVid);
@@ -88,7 +92,7 @@ namespace TP03
             // 
             // btnMod
             // 
-            this.btnMod.Location = new System.Drawing.Point(250, 74);
+            this.btnMod.Location = new System.Drawing.Point(250, 52);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(107, 31);
             this.btnMod.TabIndex = 4;
@@ -98,7 +102,7 @@ namespace TP03
             // 
             // btnSup
             // 
-            this.btnSup.Location = new System.Drawing.Point(250, 117);
+            this.btnSup.Location = new System.Drawing.Point(250, 88);
             this.btnSup.Name = "btnSup";
             this.btnSup.Size = new System.Drawing.Size(107, 31);
             this.btnSup.TabIndex = 5;
@@ -158,7 +162,7 @@ namespace TP03
             // 
             // btnAjt
             // 
-            this.btnAjt.Location = new System.Drawing.Point(250, 31);
+            this.btnAjt.Location = new System.Drawing.Point(250, 15);
             this.btnAjt.Name = "btnAjt";
             this.btnAjt.Size = new System.Drawing.Size(107, 31);
             this.btnAjt.TabIndex = 3;
@@ -183,6 +187,26 @@ namespace TP03
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(349, 198);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btn_rech
+            // 
+            this.btn_rech.Location = new System.Drawing.Point(250, 125);
+            this.btn_rech.Name = "btn_rech";
+            this.btn_rech.Size = new System.Drawing.Size(107, 32);
+            this.btn_rech.TabIndex = 8;
+            this.btn_rech.Text = "Rechercher";
+            this.btn_rech.UseVisualStyleBackColor = true;
+            this.btn_rech.Click += new System.EventHandler(this.btn_rech_Click);
+            // 
+            // btn_rechSlct
+            // 
+            this.btn_rechSlct.Location = new System.Drawing.Point(250, 163);
+            this.btn_rechSlct.Name = "btn_rechSlct";
+            this.btn_rechSlct.Size = new System.Drawing.Size(107, 32);
+            this.btn_rechSlct.TabIndex = 9;
+            this.btn_rechSlct.Text = "Rech&Select";
+            this.btn_rechSlct.UseVisualStyleBackColor = true;
+            this.btn_rechSlct.Click += new System.EventHandler(this.btn_rechSlct_Click);
             // 
             // Form1
             // 
@@ -218,6 +242,8 @@ namespace TP03
         private System.Windows.Forms.Button btnAjt;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_rech;
+        private System.Windows.Forms.Button btn_rechSlct;
     }
 }
 
